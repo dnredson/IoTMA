@@ -1,0 +1,113 @@
+
+
+
+
+
+
+
+
+
+
+
+
+                                                       node .\main.js
+http://177.104.61.60:1026/v2/entities/urn:ngsi-ld:TestNode
+URL:fiware-orion Host: fiware-orion:1026
+Checking Orion
+URL:db-mongo Host: db-mongo:3456
+Checking Mongo
+URL:fiware-quantum-leap Host: fiware-quantum-leap:8668
+URL:db-crate Host: db-crate:4200
+URL:mosquitto Host: mosquitto:1883
+URL:fiware-quantum-leap Host: fiware-quantum-leap:4300
+Pinging db-mongo
+Ping host:db-mongo
+Mongo host:db-mongo:3456
+(node:7364) DeprecationWarning: current URL string parser is deprecated, and will be removed in a future version. To use the new parser, pass option { useNewUrlParser: true } to MongoClient.connect.
+(node:7364) DeprecationWarning: current Server Discovery and Monitoring engine is deprecated, and will be removed in a future version. To use the new Server Discover and Monitoring engine, pass option { useUnifiedTopology: true } to the MongoClient constructor.
+Pinging fiware-quantum-leap
+Ping host:fiware-quantum-leap
+QL host:fiware-quantum-leap:8668
+Pinging db-crate
+Ping host:db-crate
+Crate host:db-crate:4200
+Pinging mosquitto
+Ping host:mosquitto
+MQTT host:mosquitto:1883
+Pinging fiware-quantum-leap
+Ping host:fiware-quantum-leap
+QL host:fiware-quantum-leap:4300
+Pinging fiware-orion
+Ping host:fiware-orion
+Orion urlfiware-orion:1026
+(node:7364) UnhandledPromiseRejectionWarning: MongoNetworkError: failed to connect to server [177.104.61.60:3456] on first connect [MongoNetworkError: connect ECONNREFUSED 177.104.61.60:3456]
+    at Pool.<anonymous> (C:\Users\dnred\OneDrive\projetos\AvailabilityAgent\node_modules\mongoose\node_modules\mongodb\lib\core\topologies\server.js:433:11)
+    at Pool.emit (events.js:198:13)
+    at createConnection (C:\Users\dnred\OneDrive\projetos\AvailabilityAgent\node_modules\mongoose\node_modules\mongodb\lib\core\connection\pool.js:577:14)
+    at connect (C:\Users\dnred\OneDrive\projetos\AvailabilityAgent\node_modules\mongoose\node_modules\mongodb\lib\core\connection\pool.js:1007:11)
+    at makeConnection (C:\Users\dnred\OneDrive\projetos\AvailabilityAgent\node_modules\mongoose\node_modules\mongodb\lib\core\connection\connect.js:31:7)
+    at callback (C:\Users\dnred\OneDrive\projetos\AvailabilityAgent\node_modules\mongoose\node_modules\mongodb\lib\core\connection\connect.js:247:5)
+    at Socket.err (C:\Users\dnred\OneDrive\projetos\AvailabilityAgent\node_modules\mongoose\node_modules\mongodb\lib\core\connection\connect.js:276:7)
+    at Object.onceWrapper (events.js:286:20)
+    at Socket.emit (events.js:198:13)
+    at emitErrorNT (internal/streams/destroy.js:91:8)
+    at emitErrorAndCloseNT (internal/streams/destroy.js:59:3)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+(node:7364) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). (rejection id: 1)
+(node:7364) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the
+Node.js process with a non-zero exit code.
+Starting QLhttp://177.104.61.60:1026/v2/entities/urn:ngsi-ld:FiwareQuantumLeap/attrs?options=keyValues url fiware-quantum-leap url2fiware-quantum-leap:8668
+false unknown true
+http://177.104.61.60:1026/v2/entities/urn:ngsi-ld:FiwareQuantumLeap/attrs?options=keyValues
+URL: http://177.104.61.60:1026/v2/entities/urn:ngsi-ld:FiwareQuantumLeap/attrs?options=keyValues
+{ ping_delay: 'unknown',
+  available: true,
+  ping_status: false,
+  timestamp: 1584044521458 }
+Starting QLhttp://177.104.61.60:1026/v2/entities/urn:ngsi-ld:fiware-quantum-leap/attrs?options=keyValues url fiware-quantum-leap url2fiware-quantum-leap:4300
+false unknown true
+http://177.104.61.60:1026/v2/entities/urn:ngsi-ld:fiware-quantum-leap/attrs?options=keyValues
+URL: http://177.104.61.60:1026/v2/entities/urn:ngsi-ld:fiware-quantum-leap/attrs?options=keyValues
+{ ping_delay: 'unknown',
+  available: true,
+  ping_status: false,
+  timestamp: 1584044521564 }
+[ { host: 'solicita��o',
+    alive: false,
+    output:
+     'A solicita��o ping n�o p�de encontrar o host db-mongo. Verifique o nome e tente\r\nnovamente.\r\n',
+    time: 'unknown',
+    min: 'unknown',
+    max: 'unknown',
+    avg: 'unknown',
+    stddev: 'unknown',
+    numeric_host: 'in' },
+  true ]
+false unknown true
+http://177.104.61.60:1026/v2/entities/urn:ngsi-ld:MongoDB/attrs?options=keyValues
+URL: http://177.104.61.60:1026/v2/entities/urn:ngsi-ld:MongoDB/attrs?options=keyValues
+{ ping_delay: 'unknown',
+  available: true,
+  ping_status: false,
+  timestamp: 1584044522321 }
+http://177.104.61.60:1026/v2/entities/urn:ngsi-ld:CrateDB/attrs?options=keyValues
+Checking Mosquitto
+false unknown false
+http://177.104.61.60:1026/v2/entities/urn:ngsi-ld:Mosquitto/attrs?options=keyValues
+URL: http://177.104.61.60:1026/v2/entities/urn:ngsi-ld:Mosquitto/attrs?options=keyValues
+{ ping_delay: 'unknown',
+  available: false,
+  ping_status: false,
+  timestamp: 1584044522741 }
+URL: http://177.104.61.60:1026/v2/entities/urn:ngsi-ld:CrateDB/attrs?options=keyValues
+{ ping_delay: 'unknown',
+  available: true,
+  ping_status: false,
+  timestamp: 1584044522725 }
+false unknown true
+http://177.104.61.60:1026/v2/entities/urn:ngsi-ld:FiwareOrion/attrs?options=keyValues
+URL: http://177.104.61.60:1026/v2/entities/urn:ngsi-ld:FiwareOrion/attrs?options=keyValues
+{ ping_delay: 'unknown',
+  available: true,
+  ping_status: false,
+  timestamp: 1584044522834 }
