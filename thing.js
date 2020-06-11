@@ -46,7 +46,7 @@ Thing.prototype.startCheck = function () {
     url2 = this.target + ":" + this.serviceport;
     console.log(url);
     console.log(url3);
-    cron.schedule("*/1 * * * *", function () {
+    cron.schedule("*/10 * * * *", function () {
       Promise.all([ping(url), checkAPI(url2)])
         .then(function (result1) {
           ping_delay = result1[0].avg;
@@ -71,7 +71,7 @@ Thing.prototype.startCheck = function () {
     console.log("URL:" + url);
     console.log("\n");
     console.log("URL:3" + url3);
-    cron.schedule("*/1 * * * *", function () {
+    cron.schedule("*/10 * * * *", function () {
       Promise.all([ping(url)])
         .then(function (result1) {
           ping_delay = result1[0].avg;
@@ -97,7 +97,7 @@ Thing.prototype.startCheck = function () {
     var url3 =
       "http://" + this.host + "/v2/entities/" + id + "/attrs?options=keyValues";
 
-    cron.schedule("*/1 * * * *", function () {
+    cron.schedule("*/10 * * * *", function () {
       Promise.all([ping(url), checkQL(url2)])
         .then(function (result1) {
           console.log("Starting QL" + url3 + " url " + url + " url2" + url2);
@@ -122,7 +122,7 @@ Thing.prototype.startCheck = function () {
     var url3 =
       "http://" + this.host + "/v2/entities/" + id + "/attrs?options=keyValues";
 
-    cron.schedule("*/1 * * * *", function () {
+    cron.schedule("*/10 * * * *", function () {
       Promise.all([ping(url), CheckMongo(url2)])
         .then(function (result1) {
           console.log(result1);
@@ -146,7 +146,7 @@ Thing.prototype.startCheck = function () {
     var url3 =
       "http://" + this.host + "/v2/entities/" + id + "/attrs?options=keyValues";
 
-    cron.schedule("*/1 * * * *", function () {
+    cron.schedule("*/10 * * * *", function () {
       Promise.all([ping(url), checkCrateDb(url2)])
         .then(function (result1) {
           ping_delay = result1[0].avg;
@@ -168,7 +168,7 @@ Thing.prototype.startCheck = function () {
     var url3 =
       "http://" + this.host + "/v2/entities/" + id + "/attrs?options=keyValues";
 
-    cron.schedule("*/1 * * * *", function () {
+    cron.schedule("*/10 * * * *", function () {
       Promise.all([ping(url), checkIoTAgent(url2)])
         .then(function (result1) {
           ping_delay = result1[0].avg;
@@ -190,7 +190,7 @@ Thing.prototype.startCheck = function () {
     var url3 =
       "http://" + this.host + "/v2/entities/" + id + "/attrs?options=keyValues";
 
-    cron.schedule("*/1 * * * *", function () {
+    cron.schedule("*/10 * * * *", function () {
       Promise.all([ping(url), CheckMqtt(url2)])
         .then(function (result1) {
           console.log("Checking Mosquitto");
@@ -213,7 +213,7 @@ Thing.prototype.startCheck = function () {
     var url3 =
       "http://" + this.host + "/v2/entities/" + id + "/attrs?options=keyValues";
     console.log("Redis");
-    cron.schedule("*/1 * * * *", function () {
+    cron.schedule("*/10 * * * *", function () {
       Promise.all([ping(url)])
         .then(function (result1) {
           console.log(result1);
@@ -235,7 +235,7 @@ Thing.prototype.startCheck = function () {
     var url3 =
       "http://" + this.host + "/v2/entities/" + id + "/attrs?options=keyValues";
     console.log("Postgres");
-    cron.schedule("*/1 * * * *", function () {
+    cron.schedule("*/10 * * * *", function () {
       Promise.all([ping(url)])
         .then(function (result1) {
           console.log(result1);
@@ -257,7 +257,7 @@ Thing.prototype.startCheck = function () {
     var url3 =
       "http://" + this.host + "/v2/entities/" + id + "/attrs?options=keyValues";
     console.log("AppServer");
-    cron.schedule("*/1 * * * *", function () {
+    cron.schedule("*/10 * * * *", function () {
       Promise.all([ping(url)])
         .then(function (result1) {
           console.log(result1);
@@ -279,7 +279,7 @@ Thing.prototype.startCheck = function () {
     var url3 =
       "http://" + this.host + "/v2/entities/" + id + "/attrs?options=keyValues";
     console.log("Geoserver");
-    cron.schedule("*/1 * * * *", function () {
+    cron.schedule("*/10 * * * *", function () {
       Promise.all([ping(url)])
         .then(function (result1) {
           console.log(result1);
@@ -301,7 +301,7 @@ Thing.prototype.startCheck = function () {
     var url3 =
       "http://" + this.host + "/v2/entities/" + id + "/attrs?options=keyValues";
     console.log("GWBridge");
-    cron.schedule("*/1 * * * *", function () {
+    cron.schedule("*/10 * * * *", function () {
       Promise.all([ping(url)])
         .then(function (result1) {
           console.log(result1);
@@ -331,7 +331,7 @@ Thing.prototype.startCheck = function () {
         id +
         "/attrs?options=keyValues";
       console.log("LoraServer");
-      cron.schedule("*/1 * * * *", function () {
+      cron.schedule("*/10 * * * *", function () {
         Promise.all([ping(url)])
           .then(function (result1) {
             console.log(result1);
